@@ -1,10 +1,10 @@
 <?php
 require_once str_replace(array('tests', 'Test.php'), array('src', '.php'), __FILE__);
-class BaiduPushTest extends PHPUnit_Framework_TestCase
+class PushTest extends PHPUnit_Framework_TestCase
 {
     public function testSimplePushToAndroid()
     {
-        $c = new Lisystec_BaiduPush('xxxapiKeyxxx', 'xxxsecretKeyxxx');
+        $c = new Lisystec_Baidu_Push('xxxapiKeyxxx', 'xxxsecretKeyxxx');
         $msg = array(
             "description"=> "testSimplePushToAndroid群发",
             "notification_basic_style"=>1,
@@ -15,7 +15,7 @@ class BaiduPushTest extends PHPUnit_Framework_TestCase
 
     public function testSimplePushToAndroidOneUser()
     {
-        $c = new Lisystec_BaiduPush('xxxapiKeyxxx', 'xxxsecretKeyxxx');
+        $c = new Lisystec_Baidu_Push('xxxapiKeyxxx', 'xxxsecretKeyxxx');
         $msg = array(
             "description"=> "单发",
             "notification_basic_style"=>7,
@@ -27,11 +27,11 @@ class BaiduPushTest extends PHPUnit_Framework_TestCase
 
     public function testPushMessage()
     {
-        $channel = new Lisystec_BaiduPush('xxxapiKeyxxx', 'xxxsecretKeyxxx');
+        $channel = new Lisystec_Baidu_Push('xxxapiKeyxxx', 'xxxsecretKeyxxx');
         if(!empty($user_id))
         {
             $push_type = 1; //推送消息到某个user
-            $optional[Lisystec_BaiduPush::USER_ID] = $user_id;
+            $optional[Lisystec_Baidu_Push::USER_ID] = $user_id;
         }
         else
         {
@@ -39,9 +39,9 @@ class BaiduPushTest extends PHPUnit_Framework_TestCase
         }
 
         //指定发到android设备
-        $optional[Lisystec_BaiduPush::DEVICE_TYPE] = 4;
+        $optional[Lisystec_Baidu_Push::DEVICE_TYPE] = 4;
         //指定消息类型为通知
-        $optional[Lisystec_BaiduPush::MESSAGE_TYPE] = 1;
+        $optional[Lisystec_Baidu_Push::MESSAGE_TYPE] = 1;
         //通知类型的内容必须按指定内容发送，示例如下：
                 //"title": "领新教育通报",
         $message = '{

@@ -1,8 +1,8 @@
 ﻿<?php
-require_once dirname(__FILE__) . '/BaiduPush/Exception.php';
-require_once dirname(__FILE__) . '/BaiduPush/RequestCore.class.php';
-require_once dirname(__FILE__) . '/BaiduPush/ChannelException.class.php';
-require_once dirname(__FILE__) . '/BaiduPush/BaeBase.class.php';
+require_once dirname(__FILE__) . '/Push/Exception.php';
+require_once dirname(__FILE__) . '/Push/RequestCore.class.php';
+require_once dirname(__FILE__) . '/Push/ChannelException.class.php';
+require_once dirname(__FILE__) . '/Push/BaeBase.class.php';
 
 /**
  * 百度云消息通道服务 PHP SDK
@@ -25,7 +25,7 @@ require_once dirname(__FILE__) . '/BaiduPush/BaeBase.class.php';
  *
  * @version 1.0.0.0
  */
-class Lisystec_BaiduPush extends BaeBase
+class Lisystec_Baidu_Push extends BaeBase
 {
     /**
      * 可选参数的KEY
