@@ -562,34 +562,6 @@ class Lisystec_Baidu_Push extends BaeBase
         }
     }
 
-    public function simplePushToAndroid($msg, $user_id=null)
-    {
-        if(!empty($user_id)) {
-            $push_type = 1; //推送消息到某个user
-            $optional[self::USER_ID] = $user_id;
-        } else {
-            $push_type = 3; //推送消息到该app中的全部user
-        }
-
-        //指定发到android设备
-        $optional[self::DEVICE_TYPE] = 3;
-        //指定消息类型为通知
-        $optional[self::MESSAGE_TYPE] = 1;
-        //通知类型的内容必须按指定内容发送，示例如下：
-        $message = array(
-                "description" => $msg['description'],
-                "notification_basic_style" => $msg['notification_basic_style'],
-                "open_type" => 2,
-            );
-
-        $message_key = "msg_key";
-        $r = $this->pushMessage ( $push_type, $message, $message_key, $optional);
-        if($r !== false) {
-            return true;
-        }
-        return false;
-    }
-
     /**
      * pushMessage
      * 用户关注： 是

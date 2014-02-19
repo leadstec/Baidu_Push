@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+    http://pear.php.net/dtd/tasks-1.0.xsd
+    http://pear.php.net/dtd/package-2.0
+    http://pear.php.net/dtd/package-2.0.xsd">
+  <name>Baidu_Push</name>
+  <channel>lisystec.github.io/pear</channel>
+  <summary>PEAR Package for Baidu Push SDK</summary>
+  <description>百度云推送的PEAR实现</description>
+  <lead>
+    <name>Frank,H.L.Lai</name>
+    <user>frank</user>
+    <email>frank@lisystec.com</email>
+    <active>yes</active>
+  </lead>
+  <date>2014-02-17</date>
+  <time>16:00:00</time>
+  <version>
+    <release>2.0.4</release>
+    <api>2.0.4</api>
+  </version>
+  <stability>
+    <release>stable</release>
+    <api>stable</api>
+  </stability>
+  <license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+  <notes>This is the first release. See http://github.com/lisystec/Baidu_Push </notes>
+  <contents>
+    <dir baseinstalldir="Lisystec" name="/">
+	  <dir name="Baidu">
+        <dir name="Push">
+	      <file name="BaeBase.class.php" role="php" />
+	      <file name="BaeException.class.php" role="php" />
+	      <file name="ChannelException.class.php" role="php" />
+	      <file name="Exception.php" role="php" />
+	      <file name="RequestCore.class.php" role="php" />
+	    </dir>
+        <file name="Push.php" role="php" />
+	  </dir>
+	  <dir name="tests">
+	    <file name="PushTest.php" role="test" />
+	  </dir>
+	  <file name="LICENSE" role="doc" />
+	  <file name="README.md" role="doc" />
+    </dir>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.3.3</min>
+      </php>
+      <pearinstaller>
+        <min>1.9.4</min>
+      </pearinstaller>
+    </required>
+  </dependencies>
+  <phprelease />
+</package>
